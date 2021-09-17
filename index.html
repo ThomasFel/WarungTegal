@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<title>Web Warung Tegal</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>Warung Tegal</h1>
+			
+			<nav>
+				<ul>
+					<li><a href="" class="current">Beranda</a></li>
+					<li><a href="">Daftar Masakan</a></li>
+					<li><a href="">Katering</a></li>
+					<li><a href="">Galeri</a></li>
+					<li><a href="">Tentang</a></li>
+					<li><a href="">Kontak</a></li>
+				</ul>
+			</nav>
+		</header>
+	
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 3</div>
+				<img src="https://img.inews.co.id/media/822/files/inews_new/2021/02/03/IMG_03022021_142500__822_x_430_piksel_.jpg" style="height: 350px;">
+				<div class="text">Soto</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 3</div>
+				<img src="https://www.unileverfoodsolutions.co.id/dam/global-ufs/mcos/SEA/calcmenu/recipes/ID-recipes/chicken-&-other-poultry-dishes/pecel-madiun/main-header.jpg" style="height: 350px;">
+				<div class="text">Pecel</div>
+			</div>
+			  
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 3</div>
+				<img src="https://yentit.com/wp-content/uploads/2020/02/1.jpg" style="height: 350px;">
+				<div class="text">Sayur Sop</div>
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+
+		<section class="courses">
+			<article>
+				<h2 style="margin: 20px 0px 0px 20px; color: #de6581;">Masakan</h2>
+				<figure>
+					<img src="img/soto.jpg" alt="soto" />
+					<figcaption>Soto Indonesia</figcaption>
+				</figure>
+
+				<hgroup>
+					<h2>Soto Ayam</h2>
+					<h3>Makanan Berkuah</h3>
+				</hgroup>
+
+				<p>Soto ayam adalah makanan khas Indonesia yang berupa sejenis sup ayam dengan kuah yang berwarna kekuningan.</p>
+			</article>
+
+			<article>
+				<figure>
+					<img src="img/pecel.jpg" alt="pecel" />
+					<figcaption>Pecel Indonesia</figcaption>
+				</figure>
+
+				<hgroup>
+					<h2>Masakan Pecel</h2>
+					<h3>Makanan dengan Bumbu Kacang</h3>
+				</hgroup>
+
+				<p>Pecel adalah makanan yang menggunakan bumbu sambal kacang sebagai bahan utamanya yang dicampur dengan aneka jenis sayuran.</p>
+			</article>
+
+			<article>
+				<figure>
+					<img src="img/sop.jpg" alt="sop" />
+					<figcaption>Sop Indonesia</figcaption>
+				</figure>
+
+				<hgroup>
+					<h2>Masakan Sayur Sop</h2>
+					<h3>Makanan Berkuah</h3>
+				</hgroup>
+
+				<p>Sayur sop adalah sup sayuran Indonesia yang terbuat dari sayuran dalam kaldu ayam atau sapi. Makanan ini biasanya disajikan sebagai sarapan atau makan siang.</p>
+			</article>
+		</section>
+
+		<aside>
+			<section class="popular-recipes">
+				<h2>Masakan Populer</h2>
+				<iframe width="225" height="150" src="https://www.youtube.com/embed/fJfGNOvJbV0"></iframe>
+				<a href="">Sayur Sop</a>
+				<a href="">Sayur Asem</a>
+				<a href="">Sayur Lodeh</a>
+				<a href="">Sayur Bayam</a>
+			</section>
+
+			<section class="contact-details">
+				<h2>Kontak</h2>
+				<p>Warung Tegal<br />di seluruh Indonesia</p>
+			</section>
+		</aside>
+
+		<footer>
+			&copy; 2015 Warung Tegal
+		</footer>
+	</div>
+
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+		
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+		
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+			var i;
+		  	var slides = document.getElementsByClassName("mySlides");
+		  	var dots = document.getElementsByClassName("dot");
+		  	if (n > slides.length) {
+				slideIndex = 1
+			}    
+		  	
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+		  	
+			for (i = 0; i < slides.length; i++) {
+			  	slides[i].style.display = "none";  
+		  	}
+		  	
+			for (i = 0; i < dots.length; i++) {
+			  	dots[i].className = dots[i].className.replace(" active", "");
+		  	}
+		  	
+			slides[slideIndex - 1].style.display = "block";  
+		  	dots[slideIndex - 1].className += " active";
+		}
+	</script>
+</body>
+</html>
